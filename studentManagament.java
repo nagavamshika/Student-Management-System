@@ -38,7 +38,8 @@ public class studentManagament {
         ObjectInputStream ois = new ObjectInputStream(fi);
 		for(int i=0;i<num;i++) {
 		Student s=(Student)ois.readObject();  
-		//casting the return type of object that is read into Student object
+	        //readObject() returns the object that is read as type "Object class"
+		// so casting the return type of object that is read into Student object
 		System.out.println(s.showInfo());
 		}
 		ois.close();
